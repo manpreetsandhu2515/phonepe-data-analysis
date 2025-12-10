@@ -9,10 +9,8 @@ This case study involves analyzing transaction data from the PhonePe digital pay
 
 The datasets span multiple years and quarters, allowing a thorough exploration of user behavior, transaction trends, and demographic influences.
 This project uses **Python** for data loading, exploration, cleaning, merging, and visualization.
-
 ---
-
-# ** Dataset Details**
+## ** Dataset Details**
 
 The data is provided through multiple sheets in an Excel file, covering different dimensions of transactions and demographics.
 
@@ -62,9 +60,7 @@ District-level demographic details:
 * Density
 * Headquarters
 * District codes
-
 ---
-
 # **Data Dictionary**
 
 ### **State_Txn and Users**
@@ -130,13 +126,9 @@ District-level demographic details:
 | Density        | Population density      |
 | Code           | District code           |
 | Alternate Name | Alternate district name |
-
 ---
-
 # **Task Breakdown (All Questions Included)**
-
 ---
-
 ## **Task 1: Data Loading and Understanding**
 
 ### **1.1 Load datasets and inspect rows**
@@ -163,9 +155,7 @@ District-level demographic details:
 * Count total states
 * Count total districts
 * Identify state with highest number of districts
-
 ---
-
 ## **Task 2: Exploratory Data Analysis (EDA)**
 
 ### **2.1 Transaction trends analysis**
@@ -206,9 +196,7 @@ District-level demographic details:
 
 * Create unique mapping using drop_duplicates()
 * Export to CSV
-
 ---
-
 ## **Task 3: Data Quality Checks**
 
 ### **3.1 State–District consistency check**
@@ -218,9 +206,7 @@ For each state:
 * Sum district-level transactions, amount, users
 * Compare with state-level data
 * Display mismatches
-
 ---
-
 ## **Task 4: Data Merging & Advanced Analysis**
 
 ### **4.1 Ratio of users to population**
@@ -246,9 +232,7 @@ For each state:
 * Merge State_DeviceData with State_Txn
 * Compute brand usage ratio per state
 * Create bar chart
-
 ---
-
 ## **Task 5: Data Visualization**
 
 ### **5.1 Transactions & amount over time**
@@ -262,9 +246,7 @@ For each state:
 ### **5.3 Population density visualization**
 
 * Bar plot of population density for districts in selected state
-
 ---
-
 ## **Task 6: Insights & Conclusions (Advanced)**
 
 ### **6.1 Trend identification**
@@ -282,6 +264,5 @@ For each state:
 * Key findings
 * Actionable recommendations
 * Summary of learning
-
 ---
 
