@@ -1,207 +1,307 @@
-<img width="500" height="333" alt="image" src="https://github.com/user-attachments/assets/dfdd5b5d-b7d3-4949-8424-d2138eccf549" />
 
-# phonepe-data-analysis
-Overview: This case study involves analyzing transaction data from the financial application PhonePe along with demographic data across various states and districts in India. The objective is to provide insights into transaction trends, device usage, and demographic correlations, while ensuring data consistency and performing advanced analyses to uncover deeper insights.
+<img width="860" height="313" alt="image" src="https://github.com/user-attachments/assets/373328dc-9833-4da1-a07b-8f0f17ec4687" />
 
-The datasets span multiple years and quarters, providing a comprehensive view of transactions, user behavior, and demographic details. Participants are expected to use their Python skills to load, explore, and analyze the data, ultimately deriving meaningful insights and visualizations.
- 
+# **PhonePe Case Study – Comprehensive Data Analysis**
 
-Dataset Details:
+## **Overview**
 
-The data is spread across multiple sheets in an Excel file, each containing different aspects of the transaction and demographic data. Below is an overview of each dataset:
- 
+This case study involves analyzing transaction data from the PhonePe digital payments platform along with demographic data across various states and districts in India. The aim is to uncover insights related to transaction behavior, device usage, population demographics, and correlations between financial activity and regional characteristics.
 
-Dataset (Open link in a new tab and download the dataset.)
+The datasets span multiple years and quarters, allowing a thorough exploration of user behavior, transaction trends, and demographic influences.
+This project uses **Python** for data loading, exploration, cleaning, merging, and visualization.
 
- 
+---
 
-This case study utilizes three key datasets, each providing daily updates on different aspects of the pandemic for various countries and regions:
+# **📂 Dataset Details**
 
-State_Txn and Users: This dataset contains transaction and user data at the state level. It includes information on the number of transactions, total transaction amount, average transaction value, number of registered users, and app opens.
-State_TxnSplit: This dataset provides a breakdown of transaction types at the state level. It includes information on different transaction types, the number of transactions, total transaction amount, and average transaction value for each type.
-State_DeviceData: This dataset details the device brands used by registered users at the state level. It includes information on the number of registered users per device brand and the percentage of users using each brand.
-District_Txn and Users: This dataset contains transaction and user data at the district level. It includes information on the number of transactions, total transaction amount, average transaction value, number of registered users, and app opens for each district.
-District Demographics: This dataset provides demographic details for each district. It includes information on the population, area, population density, and district headquarters.
-Data Dictionary:
+The data is provided through multiple sheets in an Excel file, covering different dimensions of transactions and demographics.
 
-Below is the data dictionary for the datasets used in this case study:
+### **1. State_Txn and Users**
 
-State_Txn and Users
-State: Name of the state
-Year: Year of the data
-Quarter: Quarter of the year
-Transactions: Number of transactions
-Amount (INR): Total amount of transactions in INR
-ATV (INR): Average transaction value in INR
-Registered Users: Number of registered users
-App Opens: Number of app opens
- 
-State_TxnSplit
-State: Name of the state
-Year: Year of the data
-Quarter: Quarter of the year
-Transaction Type: Type of transaction (e.g., Recharge & bill payments, Peer-to-peer payments)
-Transactions: Number of transactions
-Amount (INR): Total amount of transactions in INR
-ATV (INR): Average transaction value in INR
- 
-State_DeviceData
-State: Name of the state
-Year: Year of the data
-Quarter: Quarter of the year
-Brand: Brand of the device
-Registered Users: Number of registered users using the brand
-Percentage: Percentage of registered users using the brand
- 
-District_Txn and Users
-State: Name of the state
-Year: Year of the data
-Quarter: Quarter of the year
-District: Name of the district
-Code: District code
-Transactions: Number of transactions
-Amount (INR): Total amount of transactions in INR
-ATV (INR): Average transaction value in INR
-Registered Users: Number of registered users
-App Opens: Number of app opens
- 
-District Demographics
-State: Name of the state
-District: Name of the district
-Headquarters: District headquarters
-Population: Population of the district
-Area (sq km): Area of the district in square kilometers
-Density: Population density
-Code: District code
-Alternate Name: Alternate name of the district
-Based on the above, please solve the questions below. Please ensure to have fun and learn from this exercise. If you have difficulty solving some part, you can take help from your peers to solve it but ensure that you understand why you have applied a specific query as the interviewer might ask you to explain all or some parts of the code.
+Contains state-level transaction and user data:
 
+* Number of transactions
+* Total transaction amount
+* Average transaction value (ATV)
+* Registered users
+* App opens
 
-Task 1: Data Loading and Understanding
+### **2. State_TxnSplit**
 
-1.1: Load each dataset and display its structure
+Breakdown of transaction types at the state level:
 
-Load the State_Txn and Users dataset and display its first 5 rows.
-Load the State_TxnSplit dataset and display its bottom 10 rows.
-Load the State_DeviceData dataset and display 10 rows from the middle of the dataset.
-Load the District_Txn and Users dataset and display its first 10 rows and last 10 rows.
-Load the District Demographics dataset and display every 10th row.
- 
-1.2: Display basic statistics and data types for each dataset
+* Transaction type
+* Number of transactions
+* Total amount
+* Average transaction value
 
-For each dataset, display the summary statistics (mean, median, std, etc.) for numerical columns.
-Display the data types of each column in each dataset.
- 
-1.3: Check for missing values
+### **3. State_DeviceData**
 
-Identify any missing values in each dataset.
-Calculate the percentage of missing values for each column that has missing values.
-Highlight which column has the highest percentage of missing values in each dataset.
- 
-1.4: Create a summary
+Device usage at the state level:
 
-Calculate the total number of states and the total number of districts.
-Identify the state with the highest number of districts. [hint: you can use value_counts() and idxmax()]
- 
-Task 2: Exploratory Data Analysis (EDA)
+* Device brand
+* Number of registered users per brand
+* Percentage usage
 
-2.1: Analyze transaction trends over the years for each state
+### **4. District_Txn and Users**
 
-Calculate the total number of transactions and total transaction amount for each state over the years. Display the results in a tabular format.
-Identify the top 5 states with the highest transaction volumes and the top 5 states with the lowest transaction volumes. Display the results.
- 
-2.2: Identify the most common transaction types in each state and quarter
+District-level transaction and user data:
 
-For each state and quarter, determine the most frequent transaction type. Display the results in a tabular format.
- 
-2.3: Determine the device brand with the highest number of registered users in each state
+* Transactions
+* Transaction amount
+* ATV
+* Registered users
+* App opens
 
-Identify the device brand with the highest number of registered users in each state. Display the results in a tabular format.
- 
-2.4: Create a list of the top district per state based on population
+### **5. District Demographics**
 
-For each state, identify the district with the highest population. Display the results in a tabular format.
-Create a column chart depicting the district with the highest population for each state.
- 
-2.5: Calculate the average transaction value (ATV) for each state
+District-level demographic details:
 
-Compute the average transaction value for each state. Display the results in a tabular format.
-Identify the top 5 states with the highest ATV and the top 5 states with the lowest ATV. Display the results.
- 
-2.6: Analyze app usage trends
+* Population
+* Area
+* Density
+* Headquarters
+* District codes
 
-Calculate the total number of app opens over the years and quarters for each state. Display the results in a tabular format.
-Identify trends in app usage by creating a line plot showing the number of app opens over time for a selected state.
- 
-2.7: Distribution of transaction types
+---
 
-Create a bar chart showing the distribution of different transaction types for each state for the most recent quarter in the dataset.
- 
-2.8: Find unique mapping between district name and district code
+# **🧾 Data Dictionary**
 
-Identify the unique mapping between district names and district codes from the dataset. [hint: you can use drop_duplicates()] 
-Create a CSV file containing the unique district name and district code mappings.
-Export the CSV file.
- 
-Task 3: Data Quality Checks
+### **State_Txn and Users**
 
-3.1: Ensure data consistency across state and district levels
+| Column           | Description                |
+| ---------------- | -------------------------- |
+| State            | Name of the state          |
+| Year             | Year of data               |
+| Quarter          | Quarter of the year        |
+| Transactions     | Total transactions         |
+| Amount (INR)     | Total transaction amount   |
+| ATV (INR)        | Average transaction value  |
+| Registered Users | Number of registered users |
+| App Opens        | Total app opens            |
 
-For each state, calculate the total number of transactions, total transaction amount, and total registered users by summing up the values from the district level data.
-Compare the results with the corresponding values at the state level to ensure they match.
-Display any discrepancies found between the district-level and state-level data.
- 
-Task 4: Data Merging and Advanced Analysis
+### **State_TxnSplit**
 
-4.1: Ratio of users to population by state
+| Column           | Description               |
+| ---------------- | ------------------------- |
+| State            | Name of the state         |
+| Year             | Year of data              |
+| Quarter          | Quarter of the year       |
+| Transaction Type | Type of transaction       |
+| Transactions     | Number of transactions    |
+| Amount (INR)     | Total transaction amount  |
+| ATV (INR)        | Average transaction value |
 
-Merge the State_Txn and Users dataset with the District Demographics dataset to calculate the ratio of registered users to the population for each state. Display the results in a tabular format.
-Create a column chart depicting the ratio of users to population by state.
- 
-4.2: Correlate population density with transaction volume
+### **State_DeviceData**
 
-Merge the District_Txn and Users dataset with the District Demographics dataset.
-Calculate the correlation between population density and transaction volume.
-Create a scatter plot to visualize the correlation between population density and transaction volume.
- 
-4.3: Average transaction amount per user
+| Column           | Description            |
+| ---------------- | ---------------------- |
+| State            | Name of the state      |
+| Year             | Year of data           |
+| Quarter          | Quarter                |
+| Brand            | Device brand           |
+| Registered Users | Users using this brand |
+| Percentage       | Percentage usage       |
 
-Merge relevant datasets to calculate the average transaction amount per user for each state. Display the results in a tabular format.
-Identify the top 5 states with the highest average transaction amount per user and the top 5 states with the lowest average transaction amount per user. Display the results.
- 
-4.4: Device brand usage ratio
+### **District_Txn and Users**
 
-Merge the State_DeviceData dataset with the State_Txn and Users dataset.
-Calculate the ratio of users using each device brand to the total number of registered users in each state. Display the results in a tabular format.
-Create a bar chart depicting the device brand usage ratio for each state.
- 
-Task 5: Data Visualization
+| Column           | Description               |
+| ---------------- | ------------------------- |
+| State            | State name                |
+| Year             | Year                      |
+| Quarter          | Quarter                   |
+| District         | District name             |
+| Code             | District code             |
+| Transactions     | Number of transactions    |
+| Amount (INR)     | Total amount              |
+| ATV (INR)        | Average transaction value |
+| Registered Users | Registered users          |
+| App Opens        | App opens                 |
 
-5.1: Plot the total transactions and amount over time for a selected state
+### **District Demographics**
 
-Create a line plot showing the total number of transactions and the total transaction amount over time (years and quarters) for a selected state. 
-[Hint: you can select any state, maybe your home state or state with max transactions]
- 
+| Column         | Description             |
+| -------------- | ----------------------- |
+| State          | State name              |
+| District       | District name           |
+| Headquarters   | District HQ             |
+| Population     | Total population        |
+| Area (sq km)   | Area                    |
+| Density        | Population density      |
+| Code           | District code           |
+| Alternate Name | Alternate district name |
 
-5.2: Create a pie chart showing the distribution of transaction types for a specific quarter
+---
 
-Create a pie chart showing the distribution of different transaction types for a selected state and quarter.
- 
-5.3: Visualize the population density of districts in a selected state
+# **📝 Task Breakdown (All Questions Included)**
 
-Create a bar plot showing the population density of districts in a selected state.
- 
-Task 6: Insights and Conclusions [Advanced Section] 
+---
 
-6.1: Identify any trends or patterns in the transaction data
+## **Task 1: Data Loading and Understanding**
 
-Analyze the transaction data to identify any noticeable trends or patterns. Summarize your findings. [hint: you can create line graph – at year or quarter and discuss your findings with interviewer] 
- 
-6.2: Correlate demographic data with transaction data
+### **1.1 Load datasets and inspect rows**
 
-Find correlations between demographic data (e.g., population density) and transaction data (e.g., transaction volume). Summarize your findings. [Hint: you can use corr()]
- 
-6.3: Summarize findings and insights
+* Load State_Txn and Users → display first 5 rows
+* Load State_TxnSplit → display last 10 rows
+* Load State_DeviceData → display 10 middle rows
+* Load District_Txn and Users → display first 10 and last 10 rows
+* Load District Demographics → display every 10th row
 
-Summarize the key findings and insights from your analysis. Provide actionable recommendations based on the data. [Hint: type and print your recommendations and findings in the notebook. This is open ended]
+### **1.2 Summary statistics + data types**
+
+* Display mean, median, std for each dataset
+* Display data types of all columns
+
+### **1.3 Missing value analysis**
+
+* Identify missing values
+* Compute % missing per column
+* Highlight column with highest missing %
+
+### **1.4 Create summary**
+
+* Count total states
+* Count total districts
+* Identify state with highest number of districts
+
+---
+
+## **Task 2: Exploratory Data Analysis (EDA)**
+
+### **2.1 Transaction trends analysis**
+
+* Total transactions & amount for each state over years
+* Top 5 states with highest transaction volume
+* Bottom 5 states with lowest volume
+
+### **2.2 Most common transaction types**
+
+* Identify most frequent transaction type per state & quarter
+
+### **2.3 Device brand dominance**
+
+* Device brand with the highest registered users per state
+
+### **2.4 Top district per state (population)**
+
+* Identify highest population district per state
+* Create a column chart
+
+### **2.5 Average Transaction Value (ATV)**
+
+* Compute ATV for each state
+* Top 5 highest ATV states
+* Bottom 5 lowest ATV states
+
+### **2.6 App usage trends**
+
+* Total app opens per state over years and quarters
+* Line plot for selected state
+
+### **2.7 Distribution of transaction types**
+
+* Bar chart for most recent quarter
+
+### **2.8 Unique district code mapping**
+
+* Create unique mapping using drop_duplicates()
+* Export to CSV
+
+---
+
+## **Task 3: Data Quality Checks**
+
+### **3.1 State–District consistency check**
+
+For each state:
+
+* Sum district-level transactions, amount, users
+* Compare with state-level data
+* Display mismatches
+
+---
+
+## **Task 4: Data Merging & Advanced Analysis**
+
+### **4.1 Ratio of users to population**
+
+* Merge State_Txn with Demographics
+* Compute user-to-population ratio
+* Column chart
+
+### **4.2 Correlation: population density vs transaction volume**
+
+* Merge District_Txn with Demographics
+* Compute correlation
+* Scatter plot
+
+### **4.3 Average transaction amount per user**
+
+* Merge datasets
+* Compute average amount per user
+* Top 5 & bottom 5 states
+
+### **4.4 Device brand usage ratio**
+
+* Merge State_DeviceData with State_Txn
+* Compute brand usage ratio per state
+* Create bar chart
+
+---
+
+## **Task 5: Data Visualization**
+
+### **5.1 Transactions & amount over time**
+
+* Line plot for selected state (based on years + quarters)
+
+### **5.2 Transaction type distribution (pie chart)**
+
+* For selected state + quarter
+
+### **5.3 Population density visualization**
+
+* Bar plot of population density for districts in selected state
+
+---
+
+## **Task 6: Insights & Conclusions (Advanced)**
+
+### **6.1 Trend identification**
+
+* Analyze long-term transaction trends
+* Summarize findings
+
+### **6.2 Demographic correlation**
+
+* Correlate population density with transaction volume
+* Discuss insights
+
+### **6.3 Final conclusions**
+
+* Key findings
+* Actionable recommendations
+* Summary of learning
+
+---
+
+# **📁 Project Structure**
+
+```
+├── Phone_Pe_CaseStudy.ipynb
+├── phonepe.xlsx
+└── README.md
+```
+
+---
+
+# **🚀 How to Run**
+
+```
+pip install pandas matplotlib seaborn
+jupyter notebook Phone_Pe_CaseStudy.ipynb
+```
+
+---
+
 
