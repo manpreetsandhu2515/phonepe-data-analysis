@@ -12,7 +12,7 @@ This project uses **Python** for data loading, exploration, cleaning, merging, a
 
 ---
 
-# **📂 Dataset Details**
+# ** Dataset Details**
 
 The data is provided through multiple sheets in an Excel file, covering different dimensions of transactions and demographics.
 
@@ -65,7 +65,7 @@ District-level demographic details:
 
 ---
 
-# **🧾 Data Dictionary**
+# **Data Dictionary**
 
 ### **State_Txn and Users**
 
@@ -133,7 +133,7 @@ District-level demographic details:
 
 ---
 
-# **📝 Task Breakdown (All Questions Included)**
+# **Task Breakdown (All Questions Included)**
 
 ---
 
@@ -284,24 +284,4 @@ For each state:
 * Summary of learning
 
 ---
-
-# **📁 Project Structure**
-
-```
-├── Phone_Pe_CaseStudy.ipynb
-├── phonepe.xlsx
-└── README.md
-```
-
----
-
-# **🚀 How to Run**
-
-```
-pip install pandas matplotlib seaborn
-jupyter notebook Phone_Pe_CaseStudy.ipynb
-```
-
----
-
 
