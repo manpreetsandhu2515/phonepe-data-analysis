@@ -1,5 +1,5 @@
 
-<img width="600" height="313" alt="image" src="https://github.com/user-attachments/assets/373328dc-9833-4da1-a07b-8f0f17ec4687" />
+<img width="500" height="213" alt="image" src="https://github.com/user-attachments/assets/373328dc-9833-4da1-a07b-8f0f17ec4687" />
 
 # **PhonePe Case Study – Comprehensive Data Analysis**
 
