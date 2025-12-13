@@ -10,7 +10,7 @@ This case study involves analyzing transaction data from the PhonePe digital pay
 The datasets span multiple years and quarters, allowing a thorough exploration of user behavior, transaction trends, and demographic influences.
 This project uses **Python** for data loading, exploration, cleaning, merging, and visualization.
 ---
-## ** Dataset Details**
+## **Dataset Details**
 
 The data is provided through multiple sheets in an Excel file, covering different dimensions of transactions and demographics.
 
